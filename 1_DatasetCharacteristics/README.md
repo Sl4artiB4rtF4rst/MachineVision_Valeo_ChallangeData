@@ -5,8 +5,8 @@
 ## Dataset Information
 
 ### Dataset Source
-- **Dataset Link:** [Provide a direct link to your dataset. If the dataset is private, explain the reason and provide contact information for the dataset owner]
-- **Dataset Owner/Contact:** [If applicable, provide contact information for private datasets]
+- **Dataset Link:** [https://challengedata.ens.fr/participants/challenges/157/]   
+- **Dataset Owner/Contact:** [French-Chinese electronics company]
 
 ### Dataset Characteristics
 - **Number of Observations:** [Total number of samples/records in your dataset. For time series data, also specify the temporal resolution (e.g., daily, hourly, etc.)]

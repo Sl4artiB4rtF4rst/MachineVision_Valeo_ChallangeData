@@ -2,15 +2,21 @@
 
 ## Repository Link
 
-[https://github.com/your_username/your_project_name]
+[https://github.com/Sl4artiB4rtF4rst/MachineVision_Valeo_ChallangeData]
 
 ## Description
 
-[Short project description here. Briefly summarize the problem you are trying to solve and the approach you're taking.]
+The dataset provided by the company Valeo via the website challange data consists of roughly 8000 labeled images. 
+The images depict camera (or potentially microscope / electron microscope) data of microelectronics. 
+Conductor tracks can be seen with various additional feature depending on the type structure and its 'status'. 
 
 ### Task Type
 
 [Image Classification / Chatbot / Regression / Clustering / Other]
+The main task is image classification. The main label class of interest is the status/ working condition of the depicted feature.
+The labels in this class are, for example: Good, missing and other more detailed description of features, missing features or fabrication defects. 
+In addition there are additional labels specifying the type of structure (different 'Die' types) and the year in which is was manufactured.
+Consequently multi-layer image classification can be done as an additional challenge. 
 
 ### Results Summary
 

@@ -8,15 +8,15 @@
 
 The dataset provided by the company Valeo via the website challange data consists of roughly 8000 labeled images. 
 The images depict camera (or potentially microscope / electron microscope) data of microelectronics. 
-Conductor tracks can be seen with various additional feature depending on the type structure and its 'status'. 
+Conductor tracks can be seen with various additional features depending on the type structure and its 'status'. 
 
 ### Task Type
 
 [Image Classification / Chatbot / Regression / Clustering / Other]
-The main task is image classification. The main label class of interest is the status/ working condition of the depicted feature.
+The main task is image classification. The Label gives the status / working condition of the depicted feature.
 The labels in this class are, for example: Good, missing and other more detailed description of features, missing features or fabrication defects. 
-In addition there are additional labels specifying the type of structure (different 'Die' types) and the year in which is was manufactured.
-Consequently multi-layer image classification can be done as an additional challenge. 
+In addition there are additional feature-strings specifying the type of structure (different 'Die' types) and the year in which is was manufactured.
+
 
 ### Results Summary
 

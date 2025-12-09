@@ -18,12 +18,17 @@
 - **Label Type:** Classification 
 - **Label Description:** The label represents the fabrication status of the microelectronic feature depicted. In more detail whether a kind of "bridge" is present or not. [What does this label represent? What is the prediction task?]
 - **Label Values:** 
-1. Missing: bridge-like structure (or contacts) is missing from the depicted area.
-2. GOOD: Fully functionung microelectronic structure including bridge and all correct conductive film layers 
-3. Lift-off blanc: There seems to be a missing layer in the conductive track (indicated by a different lightness and surface structure). The bridge-like feature is present. Some datapoints seem to be incorrectly labeled as 'Lift-off blanc' although they seem to be 'GOOD'.
-4. Short circuit MOS: From visual inspection only there seems no difference between this failure mode and the 'GOOD' areas. Most likely not suitable for training on image data only. 
-5. Lift-off noir: looks almost identical to 'Lift-off-blanc' (visual inspection). Some data points also seem to be labelled incorrectly. Needs to be tested whether a model will be able to descern this label at all. 
-6. Boucle plate: Some of the bridge-like features for this Label type have a different surface structure. Investigate whether this is correlated to Die or Window features. 
+
+0. GOOD: Fully functionung microelectronic structure including bridge and all correct conductive film layers
+1. Flat Loop: Some of the bridge-like features for this Label type have a different surface structure. Investigate whether this is correlated to Die or Window features. 
+2. White Lift-off: There seems to be a missing layer in the conductive track (indicated by a different lightness and surface structure). The bridge-like feature is present. Some datapoints seem to be incorrectly labeled as 'Lift-off blanc' although they seem to be 'GOOD'.
+3. Lift-off noir: looks almost identical to 'Lift-off-blanc' (visual inspection). Some data points also seem to be labelled incorrectly. Needs to be tested whether a model will be able to descern this label at all. 
+4. Missing: bridge-like structure (or contacts) is missing from the depicted area. 
+5. Short circuit MOS: From visual inspection only there seems no difference between this failure mode and the 'GOOD' areas. Most likely not suitable for training on image data only. 
+
+In the public and prive Test Data there is also an additional Label: 
+
+6. The 'Drift' or unlabeled class should be classified by the model for all data that does not belong to labels 0-5. During Challenge evaluation wrongly classifying this class will be penalized more strongly than compared to other classes. 
 
 - **Label Distribution:** 
 

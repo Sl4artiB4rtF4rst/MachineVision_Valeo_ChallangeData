@@ -11,7 +11,7 @@
 ### Model Performance
 - **Evaluation Metric:** F1-Score (and classification_report) 
 - **Performance Score:** 0.872 F1-Score 
-- **Cross-Validation Score:** [Mean and standard deviation of CV scores, e.g., 0.82 ± 0.03]
+- **Cross-Validation Score:** Validation F1-Score: 0.8252[Mean and standard deviation of CV scores, e.g., 0.82 ± 0.03]
 
 ### Evaluation Methodology
 - **Data Split:** Train/Validation/Test split:  0.64/0.16/0.2

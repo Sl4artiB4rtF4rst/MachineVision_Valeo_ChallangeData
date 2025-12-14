@@ -1,0 +1,25 @@
+Model ,Image size,Balancing,Augmentation,Epochs,Stopping Crit.,,F1 Score,F1 score worst class,Worst Class
+Model 1,75x75,balanced,no,100,"val loss, patience 15",,0.919,0.83,White lift off
+Model 2,,,,,,,0.943,0.88,White lift off
+Model 3 ,,,,,,,0.918,0.81,Flat loop
+Feat extract,,,,,,,0.781,0.61,White lift off
+Model 1,128x128,balanced,no,100,"val loss, patience 10",,0.847,0.73,GOOD
+Model 2,,,,,,,0.909,0.77,White lift off
+Model 3 ,,,,,,,0.941,0.85,White lift off
+Feat extract,,,,,,,0.814,0.69,White lift off
+Model 1,256x256,balanced,no,100,"val loss, patience 7",,0.846,0.59,White lift off
+Model 2,,,,,,,0.862,0.71,White lift off
+Model 3 ,,,,,,,0.942,0.87,White lift off
+Feat extract,,,,,,,0.919,0.84,White lift off
+Model 1,75x75,balanced,yes,100,"val loss, patience 15",,0.809,0.67,Flat loop
+Model 2,,,,,,,0.917,0.81,Flat loop
+Model 3 ,,,,,,,0.942,0.88,Flat loop
+Feat extract,,,,,,,0.783,0.67,White lift off
+Model 1,128x128,balanced,yes,100,"val loss, patience 7",,0.804,0.64,White lift off
+Model 2,,,,,,,0.895,0.74,White lift off
+Model 3 ,,,,,,,0.813,0.55,Flat loop
+Feat extract,,,,,,,0.856,0.7,White lift off
+Model 1,256x256,balanced,yes,100,"val loss, patience 7 or 3 ",,0.854,0.58,White lift off
+Model 2,,,,,,,0.818,0.69,Missing
+Model 3 ,,,,,,,0.866,0.76,Flat loop
+Feat extract,,,,,,,0.783,0.65,White lift off

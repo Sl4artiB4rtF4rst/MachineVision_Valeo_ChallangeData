@@ -7,12 +7,11 @@ This folder contains the final model definitions, training notebooks, evaluation
 | File | Description |
 |---|---|
 | `model_definition_evaluation.ipynb` | Main training notebook — trains Models 1–3 (custom CNNs) and InceptionV3 (transfer learning), evaluates all on the held-out test set |
-| `model_definition_evaluation_testing.ipynb` | Experimental notebook for testing new ideas and configurations before integrating into the main notebook |
+| `FinalModel_andDrift.ipynb` | Script to combine a well performing model with drift class detection to fully label a test dataset |
 | `ManualDriftClassLabeling.ipynb` | Script for manually labeling a subset of public test images as the `Drift` class (out-of-distribution detection) |
-| `Model Evaluations.ipynb` | Consolidated side-by-side evaluation of all model runs across hyperparameter configurations |
+| `InspectManuallyLabelledData.ipynb` | Script to inspect drift class images label with ManualDriftClassLabeling.ipynb |
 | `Model_Performance_overview.csv` | Model performance comparison table (CSV format) |
 | `Model_Performance_overview.xlsx` | Model performance comparison table (Excel format) |
-| `models.py` | Standalone Python file with all model architecture definitions |
 | `INSTRUCTIONS.md` | Setup and usage instructions for running the notebooks |
 
 ## Models Trained

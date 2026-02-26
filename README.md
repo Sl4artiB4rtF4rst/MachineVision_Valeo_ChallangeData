@@ -60,7 +60,7 @@
 
 ## 1. Project Overview
 
-This project was developed as a group assignment for the **OpenCampus course "Machine Learning with TensorFlow"** (2024/2025). The objective is to build and evaluate a convolutional neural network (CNN) classification pipeline capable of identifying fabrication defects in microelectronic components from machine vision imagery.
+This project was developed as a group assignment for the **OpenCampus course "Machine Learning with TensorFlow"** (2024/2025). The objective is to build and evaluate a convolutional neural network (CNN) classification pipeline capable of identifying fabrication defects in microelectronic components from machine vision.
 
 The dataset is sourced from the **Valeo ChallengeData competition** (Challenge #157), hosted by [challengedata.ens.fr](https://challengedata.ens.fr/participants/challenges/157/). It consists of approximately 8,278 labeled grayscale images of microelectronic conductor tracks and contacts, where each image is assigned a label describing the fabrication or structural status of the depicted feature.
 
@@ -236,7 +236,7 @@ Images are loaded using Keras `ImageDataGenerator` with `flow_from_dataframe()`,
 
 - Pixel intensity normalization: rescaling by `1/255` to map values to `[0, 1]`
 - Grayscale channel mode (`color_mode="grayscale"`) for custom CNN models
-- RGB channel mode (`color_mode="rgb"`) for transfer learning models (InceptionV3 expects 3-channel input)
+- RGB channel mode (`color_mode="rgb"`) for transfer learning models grayscale images are represented as 3 channel color images where all channels have identical values(InceptionV3 expects 3-channel input) 
 - Resize to target resolution (default: `299×299` px)
 
 **Data augmentation** (tested as optional):
@@ -264,6 +264,8 @@ Given the extreme class imbalance (approximately 79% `Missing`), two strategies 
 **Unbalanced training:** Models are also trained on the full unbalanced dataset for comparison. Predictably, this produces high aggregate accuracy but poor minority-class performance.
 
 **Planned:** Class-weighted loss as an alternative to undersampling, allowing all available data to be used while adjusting the gradient contribution per class.
+
+**Adjusting loss:** A self-balancing loss function (focal loss) was tried. Due to time constraints and initial poor performance we didnt't follow up on this.
 
 ### 6.3 Data Splits
 
@@ -333,7 +335,8 @@ InceptionV3(weights='imagenet', include_top=False, input_shape=(299×299×3))
 → Dense(6, Softmax)
 ```
 
-InceptionV3 was chosen based on its strong performance in the SEM classification literature (Source 3) and its native support for the 299×299 input size used throughout this project. Feature extraction (all base layers frozen) was the first approach; fine-tuning is planned in future iterations.
+InceptionV3 was chosen based on its strong performance in the SEM classification literature (Source 3) and its native support for the 299×299 input size used throughout this project. Feature extraction (all base layers frozen) was the first approach. Fine tuning with varying number of unfrozen layers was tested with mediocre sucess. 
+The key component in getting a well performing transfer learning model was multi-phase training in which the number of trainable layers was gradually increased after training for multiple epochs (training parameters were also adjusted in between stages). 
 
 ### 6.5 Training Configuration
 
